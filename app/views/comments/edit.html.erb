@@ -1,0 +1,13 @@
+<%= form_for [@article, @comment] do |form| %>
+  <div class="form-group">
+    <%= form.label :heading %>
+    <%= form.text_field :heading, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body, class: 'form-control' %>
+  </div>
+    <%= form.submit 'create comment' %>
+<% end -%>
+
+

@@ -1,0 +1,15 @@
+<h3><%= @article.headline %></h3>
+<p><%= @article.body %></p>
+<h4><%= @article.conclusion%></h4>
+<h5><%= @article.summary%> </h5>
+<h5><%= @article.friendly_id%></h5>
+<h5><%= @article.headline%></h5>
+<h3>comments</h3><hr>
+<% @article.comments.each do |comment|%>
+<p><%= comment.body%>   </p>
+
+<%end%>	 
+<h5><%= link_to  'edit' ,edit_article_path(@article)%></h5>
+<h5><%= link_to 'back' , articles_path%></h5>
+<h5><%= link_to 'comment',  new_article_comment_path(@article)%></h5>
+
